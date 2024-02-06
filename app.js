@@ -1,4 +1,4 @@
-import wordArry from "/words.js";
+import wordArry from "./words.js";
 const wordDIV = document.querySelector(".word");
 let correctLetters =[];
 let random = Math.floor(Math.random() * wordArry.length-1);

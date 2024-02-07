@@ -45,9 +45,9 @@ document.getElementById("btn").addEventListener("click",()=>{
          if(checkAnagram(correctLetters,correctWordArray)){
             count -= correctWord.length;
             let message ='';
-            if (count === 1) {
+            if (count === 0) {
                 message = "Correct On the First Try. Goated For Real";
-            } else if (count === 2 || count === 3) {
+            } else if (count >= 1 && count <=3) {
                 message = "Alright Not Bad";
             } else if (count >= 4 && count <= 6) {
                 message = "Bro, Aint no way u gotta pick up a book";
@@ -60,7 +60,7 @@ document.getElementById("btn").addEventListener("click",()=>{
             else if (count>12) {
                 message = "Are You sure Your Not Brain Dead but anyway u got the word correct ";
             }
-s            
+           
             const gameover = document.querySelector(".gameover");
             const game = document.querySelector(".game");
             const gameElement = ` <div class="sentence">Congratulations U Guessed The Word After ${count} Times<p>${message}</p></div>

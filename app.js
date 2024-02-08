@@ -42,6 +42,7 @@ function endGame(){
            
     gameovertimer.innerHTML =gameElement;
     gameovertimer.classList.remove('hide');
+    const resetbtn = document.getElementById('reset');
     resetbtn.addEventListener("click",()=>{
                     
         window.location.reload();
@@ -88,7 +89,7 @@ if(gameRunning){
         random = Math.floor(Math.random() * wordArry.length-1);
         correctWord = wordArry[random];
     }
-    let RandomNumber = 1+ Math.random()*4
+    let RandomNumber = 1+ Math.random()*3
     const currentDate = new Date();
    const  countDate = new Date();
    countDate.setMinutes (countDate.getMinutes() + RandomNumber);
